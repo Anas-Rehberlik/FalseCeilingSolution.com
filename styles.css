@@ -1,0 +1,88 @@
+/* to make header fix on all over the page  */
+/*#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: transparent;
+    
+  } */
+
+
+ /* Opacity of Background image of HOME */
+  #Home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 12, 12, 0.253); /* set the opacity value here */
+  
+  }
+
+
+
+/* SlideShow at ABout US Section */
+
+  /*.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  
+  .mySlides {
+    display: none;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mySlides {
+      max-width: 80%;
+      margin: auto;
+    }
+  } */
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* #Home { */
+    /* background-image: url('image/home.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center center; */
+    /* height: 100vh; */
+  /* } */
+  
+
+  
+  /*.bg-white {
+    background-color: rgb(255, 255, 255);
+  }*/
+  
+  
