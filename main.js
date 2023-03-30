@@ -1,46 +1,3 @@
-// this will change the bg color of header while scrolling
-
-/*window.addEventListener('scroll', function() {
-  var header = document.getElementById('header');
-  if (window.pageYOffset > 0) {
-    header.classList.add('bg-red-500');
-    header.classList.remove('bg-transparent');
-  } else {
-    header.classList.add('bg-transparent');
-    header.classList.remove('bg-red-500');
-  }
-});*/
-
-
-
-
-// this will change the bg color of header while scrolling
-
-
-function scrollFunction() {
-  // Get the current scroll position
-  const scrollPosition = window.pageYOffset;
-  
-  // Select the header element
-  const header = document.getElementById("header");
-
-  // Check if the user has scrolled more than 0 pixels
-  if (scrollPosition > 0) {
-    // Add the bg-white class to the header
-    header.classList.add("bg-white");
-  } else {
-    // Remove the bg-white class from the header
-    header.classList.remove("bg-white");
-  }
-}
-
-// Execute the scrollFunction on scroll
-window.onscroll = function() {
-  scrollFunction();
-};
-
-
-
 
 
 // to create image slide show in about us section
@@ -79,3 +36,41 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
  
+// document.addEventListener("DOMContentLoaded", function() {
+//   // your JavaScript code goes here
+// });
+
+
+
+// for dropdown menu
+
+// for menu icon toggle
+
+// to remove menu when user click on navigation like hime , about us, etc
+
+document.addEventListener("DOMContentLoaded", function() {
+  // your JavaScript code goes here
+  const button = document.querySelector('[data-collapse-toggle]');
+  const menu = document.querySelector('#mobile-menu-2');
+  const navLinks = document.querySelectorAll('#mobile-menu-2 a');
+  const menuIcon = document.querySelector('.menu-icon');
+  const closeIcon = document.querySelector('.close-icon');
+
+  button.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+    this.setAttribute('aria-expanded', !expanded);
+    menu.classList.toggle('hidden');
+    menuIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      button.setAttribute('aria-expanded', 'false');
+      menu.classList.add('hidden');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    });
+  });
+});
+
